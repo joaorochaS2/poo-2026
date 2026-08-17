@@ -6,6 +6,9 @@ public class Personagem{
     public void receberDano(int dano) {
         vida = vida - dano;
         System.out.println(nome + " sofreu " + dano + " de dano");
+        if (vida<0){
+            vida=0;
+        }
     }
     public boolean estaVivo(){
         if (vida>0){
@@ -39,28 +42,26 @@ public class Main{
         chefe.vida = 500;
         chefe.forca = 40;
         
+        System.out.println("\n===Ficha===");
         jogador.ficha();
         chefe.ficha();
-        
+        System.out.println("\n===Batalha===");
         while(jogador.estaVivo() && chefe.estaVivo()){
-            System.out.println("\n===Batalha===");
             jogador.atacar(chefe);
-            System.out.println("\n===Ficha===");
-            jogador.ficha();
-            chefe.ficha();
+            
             if (! chefe.estaVivo()){
                 System.out.println(chefe.nome + " derrotado.");
                 break;
             }
-            System.out.println("\n===Batalha===");
             chefe.atacar(jogador);
-            System.out.println("\n===Ficha===");
-            jogador.ficha();
-            chefe.ficha();
+
             if (! jogador.estaVivo()){
                 System.out.println("\n" + jogador.nome + " derrotado!!!");
                 break;
             }
         }
+        System.out.println("\n===Ficha===");
+        jogador.ficha();
+        chefe.ficha();
     }
 }
