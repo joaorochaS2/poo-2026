@@ -37,9 +37,11 @@ if __name__ == "__main__":
     while jogador.estaVivo() and chefe.estaVivo():
         jogador.atacar(chefe)
         if not chefe.estaVivo():
+            print("\n", chefe.nome, "derrotado")
             break
         chefe.atacar(jogador)
         if not jogador.estaVivo():
+            print("\n", jogador.nome, "derrotado")
             break
 
     print("===Ficha===")
