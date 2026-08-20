@@ -36,4 +36,14 @@ public class Personagem{
             System.out.println("Nível inválida!");
         }
     }
+
+    public static void main(String[] args) {
+        Personagem p = new Personagem();
+        p.setNome("nome");
+        p.setNome(null); //Nome inválido!
+        p.setVida(100);
+        p.setVida(-100);//Vida inválida!
+        p.setNiveL(10);
+        p.setNiveL(0);//Nível inválida!
+    }
 }
