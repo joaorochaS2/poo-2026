@@ -1,9 +1,9 @@
-class personagem():
+class Personagem():
 
-    def __init__(self, nome, vida, nivel):
-        self._nome=nome
-        self._vida=vida
-        self._nivel=nivel
+    def __init__(self):
+        self._nome=""
+        self._vida=0
+        self._nivel=1
     
     @property
     def nome(self):
@@ -18,7 +18,7 @@ class personagem():
         return self._nivel
     
     @nome.setter
-    def vida(self, n):
+    def nome(self, n):
         if (n != None):
             self._nome= n
         else:
@@ -34,7 +34,16 @@ class personagem():
 
     @nivel.setter
     def nivel(self, ni):
-        if n>=1:
+        if ni>=1:
             self._nivel = ni
         else:
             print("Nível inválido!")
+
+if __name__ == "__main__":
+    p = Personagem()
+    p.nome = "nome"
+    p.nome = None #Nome inválido!
+    p.vida = 100
+    p.vida = -10 #Vida inválida!
+    p.nivel = 10
+    p.nivel = 0 #Nível inválido!
