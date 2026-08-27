@@ -49,5 +49,5 @@ Considerações finais
 Todos os critérios desejados foram atendidos. Atributos e métodos funcionam como planejado.
 Não foi utilizado IA.
 
-Dificuldades: print na classe Animal no método "exibir()", quando o atributo "dono = null" não era possivel usar "dono.getNome" para imprimir o nome do dono.
+Dificuldades: print na classe Animal no método "exibir()", quando o atributo "dono = null" não era possivel usar "dono.getNome" para imprimir o nome do dono. Para resolver eu coloquei um "if" para verificar se "dono=null" se sim é impresso "Sem dono" 
 */
