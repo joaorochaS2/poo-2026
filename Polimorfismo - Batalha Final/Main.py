@@ -187,7 +187,7 @@ class Chefe(Personagem):
     def habilidade(self):
         return "ataque devastador"
     def ficha(self):
-        print("\n[Chefe]", self._nome, "Vida:", self._vida, "Força:", self._forca)
+        print("\n[Chefe]", self._nome, "( Vida:", self._vida, "Força:", self._forca, ")")
 
 herois = []
 herois.append(Mago("Elara", 60, 5, 1))
